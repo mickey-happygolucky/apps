@@ -1,0 +1,19 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config NETUTILS_MQTTC
+	bool "MQTTC client library"
+	default n
+	depends on NET && NET_TCP
+	---help---
+		Enable support for the mqtt.  This is a public domain
+		Telnet client library available from https://github.com/LiamBindle/MQTT-C
+		modified for use with NuttX.  Original Authors:
+
+			Liam Bindle
+			Demilade Adeoye
+
+if NETUTILS_MQTTC
+endif
